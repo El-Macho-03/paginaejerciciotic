@@ -1,0 +1,643 @@
+*{
+    margin:0;
+    padding:0; 
+    box-sizing: border-box;
+ }
+
+ body{
+     font-family:"Helvetica";
+ }
+
+ nav{
+    text-align: right;
+    padding: 20px 35px;
+ }
+ nav>a{
+     color:#e4e4e4;
+     font-weight:300;
+     text-decoration: none;
+     margin-right: 10px;
+ }
+ 
+ .interruptor{
+     position: relative;
+     display: inline-block;
+     width: 60px;
+     height: 34px;
+ }
+ .interruptor input{
+     opacity: 0;
+     width: 0;
+     height: 0;
+ }
+
+ .Estosi{
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background-color:#20e2df;
+     border-radius: 34px;
+     -webkit-transition: .4s;
+     transition: .4s;
+ }
+ .Estosi:before{
+     position: absolute;
+     content: "";
+     width: 25px;
+     height: 25px;
+     left: 4px;
+     bottom: 4px;
+     background-color: #1e1e1e;
+     -webkit-transition: .4s;
+     transition: .4s;
+     border-radius: 50%;
+ }
+ .input:checked + .Estosi:before{
+     -webkit-transform: translateX(26px);
+     -ms-transform: translateX(26px);
+     transform: translateX(26px);
+     background-color: #e4e4e4;
+ }
+ .input:checked + .Estosi{
+    background-color: #20e2df;
+ }
+ .input:focus + .Estosi{
+     box-shadow: 0 0 1px #e4e4e4;
+ } 
+
+ header{
+    width: 100%;
+    height: 700px;
+    background: #20e2df;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(179, 77%, 51%, 0.575), hsla(197, 77%, 51%, 0.589)), url(../página\ web/fondo.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(179, 77%, 51%, 0.548), hsla(197, 77%, 51%, 0.548)), url(../página\ web/fondo.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+ }
+
+ .curvitas{
+    fill: rgb(255, 255, 255);
+ }
+
+ .textos-header{
+     display:flex;
+     color: #1e1e1e;
+     font-size: 20px;
+     align-items: center;
+     align-content: center;
+     flex-direction: column;
+     margin-top: 200px;
+
+ }
+ .textos-header .eltitulo{
+     font-size: 50px;
+ }
+
+.curvitas{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+ .titulo{
+     color: #20e2df;
+     font-size: 40px;
+     margin: 30px;
+     text-align: center;
+ }
+
+.caja{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+.tarjeta{
+    width: 480px;
+    padding:20px;
+    margin: 20px;
+    border-radius: 8%;
+}
+.foto{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+img.persona{
+    border-radius: 50%;
+    width: 320px;
+    border: transparent;
+}
+
+.info{
+    text-align: center;
+    padding-bottom: 10px;
+}
+hr{
+    margin: 20px 4px;
+    width: 100%;
+}
+
+header.sj{
+    width: 100%;
+    height: 600px;
+    background-image: url(../página\ web/fondosj.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ }
+
+ .eltitulosj{
+    position: absolute;
+    bottom: 250px;
+    right: 80px;
+    color: white;
+    font-size: 80px;
+}
+
+ header.Tim{
+    width: 100%;
+    height: 600px;
+    background-image: url(../página\ web/fondotim.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ }
+
+ .eltituloTim{
+    position: absolute;
+    bottom: 250px;
+    left: 60px;
+    color: white;
+    font-size: 80px;
+}
+
+ header.arr{
+    width: 100%;
+    height: 600px;
+    background-image: url(../página\ web/fondoarr.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ }
+
+ .eltituloarr{
+    position: absolute;
+    bottom: 250px;
+    right: 60px;
+    color: white;
+    font-size: 80px;
+}
+
+header.eb{
+    width: 100%;
+    height: 600px;
+    background-image: url(../página\ web/fondoeb.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+ }
+
+ .eltituloeb{
+    position: absolute;
+    bottom: 250px;
+    left: 60px;
+    color: white;
+    font-size: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+.oscuro{
+    background-color: #121212;
+}
+.oscuro .caja{
+    background-color: #121212;
+    width: 95%;
+    height: 700px;
+}
+.oscuro .curvitas{
+    fill: #121212;
+}
+.oscuro .tarjeta{
+    background-color: #1e1e1e;
+}
+
+/*Boton que no funciona*/
+.oscuro .botón{
+   display: inline-flex;
+   width: 100%;
+   height: 40px;
+   background: transparent;
+   border: 2px solid #20e2df;
+   border-radius: 10px;
+   font-size: 20px;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   text-transform: uppercase;
+   transition: .2s ease all;
+   position: relative;
+   overflow: hidden;
+}
+.oscuro .botón::after{
+    content: "";
+    width: 105%;
+    height: 105%;
+    background-color: #20e2df;
+    position: absolute;
+    z-index: 0;
+    top: -40px;
+    left: -15;
+    right: 15;
+    transition: .2s ease all;
+}
+.oscuro .botón:hover::after{
+    top: 0;
+}
+/*Boton que no funciona*/
+
+.oscuro .botón .enlace{
+    color:#e4e4e4;
+    position: relative;
+    z-index: 1;
+    transition: .2s ease all;
+    text-decoration: none;
+}
+.oscuro .titulonombre{
+    color: #e4e4e4;
+}
+.oscuro .info{
+    color: #e4e4e4;
+}
+
+.oscuro .texto1{
+    color: #e4e4e4;
+    text-align: center;
+    margin: 8px 10% 20px;
+}
+.oscuro .primeracaja{
+    border-radius: 15px;
+    background-color: #1e1e1e;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+}
+.oscuro main{
+    display: flexbox;
+    align-content: center;
+    justify-content: center;
+    height: 250px;
+}
+.oscuro header{
+    background: #20e2df;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(179, 77%, 51%, 0.575), hsla(197, 77%, 51%, 0.589)), url(../página\ web/fondo.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(179, 77%, 51%, 0.548), hsla(197, 77%, 51%, 0.548)), url(../página\ web/fondo.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+/* Universales*/
+
+/*La tabla*/
+.oscuro .lugardelatabla{
+    position: relative;
+    width:1200px;
+    margin: 150px auto;
+}
+.oscuro table{
+    width:100%;
+    background-color: #1e1e1e;
+    text-align: left;
+    border-collapse: collapse;
+    border-radius: 15px 15px 15px 15px;
+    overflow: hidden;
+    color:#e4e4e4;
+    font-size: 16px;
+    box-shadow: #e4e4e4;
+}
+.oscuro th, td{
+    padding: 20px;
+}
+.oscuro thead{
+    background-color: #20e2df;
+    color: #121212;
+    font-weight: bold;
+}
+.oscuro tr:nth-child(even){
+    background-color: #121212;
+    color:#20e2df;
+}
+.oscuro tr:last-of-type{
+    border-bottom: 2px solid #20e2df;
+}
+.oscuro tbody tr:hover{
+    background-color: #19a19f;
+    color: #e4e4e4;
+}
+/*La Tabla*/
+
+/*Video*/
+.oscuro .video{
+    position: relative;
+    height:400px;
+    width: 80%;
+}
+/*Video*/
+
+iframe{
+    position: absolute;
+    left:36%;
+    width:560px; 
+    height:315px;
+    border-radius: 15px;
+    border: 2px solid #20e2df;
+}
+
+
+
+.oscuro footer{
+    position: relative;
+    width: 98%;
+    height:200px;
+}
+
+/* Universales*/
+
+/*Pagina Tim Berners*/
+
+.oscuro .Tim{
+    background-image: url(../página\ web/fondotim.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.oscuro .cajafoto1T{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 650px;
+    height: 240px;
+    padding: 30px;
+    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    left: 55px;
+    z-index: 1;
+}
+
+.oscuro .cajafoto2T{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 850px;
+    height: 250px;
+    position: absolute;
+    top: 220px;
+    right: 35px;
+    padding: 30px;
+    margin: 0 auto;
+    z-index: 1;
+    color: #e4e4e4;
+}
+
+.oscuro .cajafoto3T{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 650px;
+    height: 280px;
+    padding: 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 100px;
+    left: 55px;
+    z-index: 1;
+}
+
+/*Pagina Tim Berners*/
+
+/*Pagina Steve Jobs*/
+.oscuro .sj{
+    background-image: url(../página\ web/fondosj.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.primeracajapaginas{
+    background-color: #1e1e1e;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    border-radius: 15px;
+}
+.oscuro .imagen1{
+    position: relative;
+    width: 90%;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+}
+.oscuro .fotopersona1{
+    position: absolute;
+    right: 10px;
+    top: 36px;
+    z-index: 0;
+    transform: scaleX(-1);
+    border-radius: 15px;
+    width: 720px;
+    height: 440px;
+}
+.oscuro .cajafoto1S{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 650px;
+    height: 350px;
+    padding: 30px;
+    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    left: 55px;
+    z-index: 1;
+}
+.oscuro .info1{
+    color: #e4e4e4;
+    font-size: 19px;
+    margin: auto;
+    padding: 10px;
+}
+.oscuro .fotopersona2{
+    position: absolute;
+    left: 10px;
+    top: 36px;
+    z-index: 0;
+    border-radius: 15px;
+    width: 680px;
+    height: 440px;
+}
+.oscuro .cajafoto2S{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 850px;
+    height: 300px;
+    position: absolute;
+    top: 120px;
+    right: 35px;
+    padding: 30px;
+    margin: 0 auto;
+    z-index: 1;
+    color: #e4e4e4;
+}
+.oscuro .info2{
+    color: #e4e4e4;
+    font-size: 19px;
+    margin: auto;
+    padding: 10px;
+}
+.oscuro .cajafoto3S{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 650px;
+    height: 250px;
+    padding: 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 100px;
+    left: 55px;
+    z-index: 1;
+}
+.oscuro .info3{
+    color: #e4e4e4;
+    font-size: 19px;
+    margin: auto;
+    padding: 10px;
+}
+/*Pagina Steve Jobs*/
+
+/*Pagina Evelyn Berezin*/
+
+.oscuro .eb{
+    background-image: url(../página\ web/fondoeb.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.oscuro .cajafoto1E{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 700px;
+    height: 380px;
+    padding: 30px;
+    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    left: 55px;
+    z-index: 1;
+}
+
+.oscuro .cajafoto2E{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 850px;
+    height: 340px;
+    position: absolute;
+    top: 120px;
+    right: 35px;
+    padding: 30px;
+    margin: 0 auto;
+    z-index: 1;
+    color: #e4e4e4;
+}
+
+.oscuro .cajafoto3E{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 650px;
+    height: 320px;
+    padding: 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 100px;
+    left: 55px;
+    z-index: 1;
+}
+
+/*Pagina Evelyn Berezin*/
+
+/*Pagina Angela Ruiz*/
+.oscuro .arr{
+    background-image: url(../página\ web/fondoarr.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.oscuro .cajafoto1A{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 650px;
+    height: 250px;
+    padding: 30px;
+    margin: 0 auto;
+    position: absolute;
+    top: 200px;
+    left: 55px;
+    z-index: 1;
+}
+
+.oscuro .cajafoto2A{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 850px;
+    height: 270px;
+    position: absolute;
+    top: 120px;
+    right: 35px;
+    padding: 30px;
+    margin: 0 auto;
+    z-index: 1;
+    color: #e4e4e4;
+}
+
+.oscuro .cajafoto3A{
+    background-color: #1e1e1e;
+    border: 2px solid #20e2df;
+    border-radius: 15px;
+    width: 650px;
+    height: 290px;
+    padding: 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 100px;
+    left: 55px;
+    z-index: 1;
+}
+
+/*Pagina Angela Ruiz*/
