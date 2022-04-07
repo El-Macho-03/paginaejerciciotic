@@ -72,8 +72,8 @@
     width: 100%;
     height: 700px;
     background: #20e2df;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(179, 77%, 51%, 0.575), hsla(197, 77%, 51%, 0.589)), url(../página\ web/fondo.jpg);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(179, 77%, 51%, 0.548), hsla(197, 77%, 51%, 0.548)), url(../página\ web/fondo.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, hsla(179, 77%, 51%, 0.575), hsla(197, 77%, 51%, 0.589)), url(https://wallpapercave.com/wp/wp2155858.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(179, 77%, 51%, 0.548), hsla(197, 77%, 51%, 0.548)), url(https://wallpapercave.com/wp/wp2155858.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
